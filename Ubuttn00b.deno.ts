@@ -1,25 +1,25 @@
 const COMMANDS = [
-  'sudo apt-get update',
-  'apt-get upgrade',
-  'sudo apt-get -y install jq',
-  'sudo apt-get -y install unzip',
+  'apt-get update',
+  'apt-get upgrade -y',
+  'apt-get -y install jq',
+  'apt-get -y install unzip',
 
   // Welp, we must have this one already:
   // 'curl -fsSL https://deno.land/x/install/install.sh | sh'
 
-  'awscli',
-  'libgtk2.0-0',
-  'libgtk-3-0',
-  'libgbm-dev',
-  'libnotify-dev',
-  'libgconf-2-4',
-  'libnss3',
-  'libxss1',
-  'libasound2',
-  'libxtst6',
-  'vim',
-  'xauth',
-  'xvfb',
+  'apt-get -y awscli',
+  'apt-get -y libgtk2.0-0',
+  'apt-get -y libgtk-3-0',
+  'apt-get -y libgbm-dev',
+  'apt-get -y libnotify-dev',
+  'apt-get -y libgconf-2-4',
+  'apt-get -y libnss3',
+  'apt-get -y libxss1',
+  'apt-get -y libasound2',
+  'apt-get -y libxtst6',
+  'apt-get -y vim',
+  'apt-get -y xauth',
+  'apt-get -y xvfb',
 ];
 
 // Import from my own github only because the upstream one has the fix for stderr but never released it as a release:
