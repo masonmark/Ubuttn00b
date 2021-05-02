@@ -7,19 +7,19 @@ const COMMANDS = [
   // Welp, we must have this one already:
   // 'curl -fsSL https://deno.land/x/install/install.sh | sh'
 
-  'apt-get -y awscli',
-  'apt-get -y libgtk2.0-0',
-  'apt-get -y libgtk-3-0',
-  'apt-get -y libgbm-dev',
-  'apt-get -y libnotify-dev',
-  'apt-get -y libgconf-2-4',
-  'apt-get -y libnss3',
-  'apt-get -y libxss1',
-  'apt-get -y libasound2',
-  'apt-get -y libxtst6',
-  'apt-get -y vim',
-  'apt-get -y xauth',
-  'apt-get -y xvfb',
+  'apt-get -y install awscli',
+  'apt-get -y install libgtk2.0-0',
+  'apt-get -y install libgtk-3-0',
+  'apt-get -y install libgbm-dev',
+  'apt-get -y install libnotify-dev',
+  'apt-get -y install libgconf-2-4',
+  'apt-get -y install libnss3',
+  'apt-get -y install libxss1',
+  'apt-get -y install libasound2',
+  'apt-get -y install libxtst6',
+  'apt-get -y install vim',
+  'apt-get -y install xauth',
+  'apt-get -y install xvfb',
 ];
 
 // Import from my own github only because the upstream one has the fix for stderr but never released it as a release:
