@@ -44,18 +44,11 @@ export class Ubuttn00b {
       currentCommand = command;
       console.log("\n🍒 " + currentCommand);
 
-      let result = await exec(`bash -c "${command}"`, { output: OutputMode.Capture });
+      const result = await exec(`bash -c "${command}"`, { output: OutputMode.Capture });
       if (result.status.success) {
         this.fuckYeaaaah(result.status.code, result.output);
       } else {
-        console.log(`💩, [exit status: ${result.status.code}]\n`);
-        console.log(
-          `💩 ABORTED: the following command:
-          (${currentCommandIndex + 1} of ${COMMANDS.length}) did not succeed:
-          "${currentCommand}":`,
-        );
-        console.log(result.output);
-        Deno.exit(result.status.code);
+        this.ohhhhhShiiiitttt(result.status.code, result.output, ++currentCommandIndex, COMMANDS.length, currentCommand);
       }
       currentCommandIndex++;
     }
@@ -67,7 +60,15 @@ export class Ubuttn00b {
     console.log(output);
   }
 
-  static ohhhhhShiiiitttt() {
+  static ohhhhhShiiiitttt(exitCode: number, output: string, cmdX: number, ofY: number, currentCommand: string  ) {
+    console.log(`💩, [exit status: ${exitCode}]\n`);
+    console.log(
+      `💩 ABORTED: the following command:
+      (${cmdX} of ${ofY}) did not succeed:
+      "${currentCommand}":`,
+    );
+    console.log(output);
+    Deno.exit(exitCode);
 
   }
 
