@@ -1,0 +1,23 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "console": "integratedTerminal",
+      "name": "Debug Deno (Allow All)",
+      "type": "node",
+      "autoAttachChildProcesses": true,
+      "request": "launch",
+      "cwd": "${workspaceFolder}",
+      "runtimeExecutable": "deno",
+      "runtimeArgs": ["run", "--inspect-brk", "-A", "--unstable", "${file}", "-h"],
+      "port": 9229
+     },
+     {
+      "type": "node",
+      "request": "attach",
+      "name": "Deno debuggery",
+      "port": 9229,
+      "protocol": "inspector"
+    },
+  ]
+}
