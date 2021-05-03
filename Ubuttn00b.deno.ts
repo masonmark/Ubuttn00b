@@ -1,5 +1,5 @@
 const COMMANDS = [
-  '/home/ubuntu/Home/Ubuttn00b/stderrblat.sh',
+  // '/home/ubuntu/Home/Ubuttn00b/stderrblat.sh',
   'sudo apt-get update',
   'sudo apt-get upgrade -y',
   'sudo apt-get -y install jq',
